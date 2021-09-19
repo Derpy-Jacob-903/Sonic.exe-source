@@ -35,6 +35,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	{
 		var daStage = PlayState.curStage;
 		var daBf:String = '';
+		var daDad:String = '';
 		switch (PlayState.SONG.player1)
 		{
 			case 'bf-pixel':
@@ -87,16 +88,24 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		sonicDEATH.antialiasing = true;
 
-		if (PlayState.SONG.song.toLowerCase() != 'endless')
+		if (PlayState.SONG.song.toLowerCase() = 'too-slow')
 			{
 			add(sonicDEATH);
 			}
-		else
+		if (PlayState.SONG.song.toLowerCase() = 'execution')
+			{
+			add(sonicDEATH);
+			}
+		if (PlayState.SONG.song.toLowerCase() = 'endless')
 		{
 			add(countdown);
 			countdown.alpha = 0;
 			countdown.cameras = [coolcamera];
 		}
+		//else
+		//{
+		
+		//}
 
 		add(bottomMajins);
 
